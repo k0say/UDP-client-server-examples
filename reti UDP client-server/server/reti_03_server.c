@@ -60,7 +60,7 @@ int main() {
 
 //DNS
 //------------------------
-	const char * name = "localhost";
+/*	const char * name = "localhost";
 	//struct hostent *host;
 	host = gethostbyname(name);
 	
@@ -79,7 +79,7 @@ int main() {
 	char* canonical_name = host->h_name;
 	fprintf(stdout, "Risultato di gethostbyaddr(%s): %s\n", ip, canonical_name);
 //---------------
-
+*/
 
 	//RICEZIONE STRINGA
 	while(1)	{
@@ -87,6 +87,7 @@ int main() {
 //DNS ----------------------
 		// Validate the parameters    
 		//argv[0] dovrà essere acquisito da tastiera
+/*
 if (argc!= 2) {        
 	printf("usage: %s ipv4 address\n", argv[0]);        
 	printf("  to return the host\n");        
@@ -96,17 +97,17 @@ if (argc!= 2) {
 
 host_name= argv[1];
 if (isalpha(host_name[0])) {        
-/* host address is a name  e.g., “www.google.com” */        
+// host address is a name  e.g., “www.google.com” 
 	printf("Calling gethostbynamewith %s\n", host_name);        
 	remoteHost= gethostbyname(host_name);    
 }    
 else {                                     
-/* host address is IP address  e.g., “127.0.0.1” */ 
+// host address is IP address  e.g., “127.0.0.1”
 	printf("Calling gethostbyaddrwith %s\n", host_name);        
 	addr.s_addr= inet_addr(host_name);        
 	remoteHost= gethostbyaddr((char *) &addr, 4, AF_INET);    
 }
-
+*/
 //-------------------------
 
 
@@ -116,13 +117,13 @@ else {
 		printf("Initial string: %.*s\n", recvMsgSize, echoBuffer);
 
 		char s[sizeof(echoBuffer)], t[sizeof(echoBuffer)];
-		int c, d = 0;
-			for(c = 0; echoBuffer[c] != '\0'; c++) {
-		    	if(check_vowel(echoBuffer[c]) == 0) {       // If not a vowel
-		      		t[d] = echoBuffer[c];
+		int dim, d = 0;
+			for(dim = 0; echoBuffer[c] != '\0'; dim++) {
+		    	if(check_vowel(echoBuffer[dim]) == 0) {       // If not a vowel
+		      		t[d] = echoBuffer[dim];
 		      		d++;
 		    	}
-		  	}
+		}
 		 
 		 t[d] = '\0';
  
