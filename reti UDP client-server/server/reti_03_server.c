@@ -118,7 +118,7 @@ else {
 
 		char s[sizeof(echoBuffer)], t[sizeof(echoBuffer)];
 		int dim, d = 0;
-			for(dim = 0; echoBuffer[c] != '\0'; dim++) {
+			for(dim = 0; echoBuffer[dim] != '\0'; dim++) {
 		    	if(check_vowel(echoBuffer[dim]) == 0) {       // If not a vowel
 		      		t[d] = echoBuffer[dim];
 		      		d++;
